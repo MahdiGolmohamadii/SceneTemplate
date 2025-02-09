@@ -112,8 +112,6 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
         self.create_layout()
         self.create_connection()
         
-
-    
     def create_widgets(self):
 
         self.main_widget = QtWidgets.QWidget()
@@ -126,15 +124,12 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
                                 self.templates[item]['category'])
             self.boxes.append(bx)
         
-        
         self.search_le = QtWidgets.QLineEdit()
         self.template_group_box = QtWidgets.QGroupBox()
         self.template_group_box.setContentsMargins(5,5,5,5)
         
         self.add_new_btn = QtWidgets.QPushButton('add new')
         
-
-
     def create_layout(self):
         
         self.templates_form_layout = QtWidgets.QFormLayout()
@@ -155,7 +150,6 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
         
         self.main_widget.setLayout(main_layout)
         
-
     def create_connection(self):
         self.add_new_btn.clicked.connect(self.on_add_new_pressed)
         self.search_le.textChanged.connect(self.search_le_changed)
@@ -163,12 +157,9 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
     def search_le_changed(self):
         self.update_template_list(self.search_le.text())
 
-
     def update_template_list(self, str=''):
         templates = scene_setup.search_in_templates(str)
         #print(templates)
-
-
 
     def on_add_new_pressed(self):
         new_window = CustomDialogs.AddNewTemplateWindow(self, scene_setup)
