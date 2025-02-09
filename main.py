@@ -25,6 +25,8 @@ class TemplateWidget(QtWidgets.QWidget):
                 self.image_path = './src/maya.png'
             case 'Blender':
                 self.image_path = './src/blender.png'
+            case 'Max':
+                self.image_path = './src/Max.png'
             case _:
                 self.image_path = ''
 

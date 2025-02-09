@@ -13,9 +13,11 @@ class SceneSetup(object):
         self.add_template('PN_LiO_BL', 'Outerior Lighting', 'Blender', 'Lighting')
         self.add_template('PN_MoP_MA', 'Props Modeling', 'Maya', 'Modeling')
         self.add_template('PN_MoC_MA','Creature Modeling', 'Maya', 'Modeling')
+        self.add_template('PN_MoC_MX','Creature Modeling', 'Max', 'Modeling')
         self.add_template('PN_RiH_MA','Human Rigging', 'Maya', 'Rig')
         self.add_template('PN_RiC_MA','Creature Rigging', 'Maya', 'Rig')
         self.add_template('PN_RiC_BL','Creature Rigging', 'Blender', 'Rig')
+        self.add_template('PN_RiC_MX','Creature Rigging', 'Max', 'Rig')
         self.add_template('PN_Ani_MA', 'Animation', 'Maya', 'Animation')
         self.add_template('PN_Ani_BL', 'Animation', 'Blender', 'Animation')
 
