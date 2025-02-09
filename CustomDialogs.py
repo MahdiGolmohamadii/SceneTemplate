@@ -101,6 +101,7 @@ class AddNewTemplateWindow(QtWidgets.QDialog):
         self.software_cd.addItem('Maya')
         self.software_cd.addItem('Blender')
         self.software_cd.addItem('3DsMax')
+        self.software_cd.addItem('Houdini')
 
         self.template_path_lb = QtWidgets.QLabel('')
         self.choose_template_path_btn = QtWidgets.QPushButton('open')

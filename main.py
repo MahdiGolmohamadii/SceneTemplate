@@ -13,13 +13,15 @@ class TemplateWidget(QtWidgets.QWidget):
 
         match category:
             case 'Rig':
-                color = 'brown'
+                color = 'darkRed'
             case 'Lighting':
                 color = 'orange'
             case 'Modeling':
-                color = 'blue'
+                color = 'darkBlue'
             case 'Animation':
-                color = 'green'
+                color = 'darkGreen'
+            case 'FX':
+                color = 'darkCyan'
         match self.software:
             case 'Maya':
                 self.image_path = './src/maya.png'
@@ -27,6 +29,8 @@ class TemplateWidget(QtWidgets.QWidget):
                 self.image_path = './src/blender.png'
             case 'Max':
                 self.image_path = './src/Max.png'
+            case 'Houdini':
+                self.image_path = './src/Houdini.png'
             case _:
                 self.image_path = ''
 

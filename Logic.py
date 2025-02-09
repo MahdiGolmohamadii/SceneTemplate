@@ -8,9 +8,10 @@ class SceneSetup(object):
 
     def fetch_data(self):
         #Fetch data from DB
-        self.add_template('PN_LiI_Ma','Interior Lighting', 'Maya', 'Lighting')
-        self.add_template('PN_LiO_Ma', 'Outerior Lighting', 'Maya', 'Lighting')
+        self.add_template('PN_LiI_Ma','Lighting', 'Maya', 'Lighting')
         self.add_template('PN_LiO_BL', 'Outerior Lighting', 'Blender', 'Lighting')
+        self.add_template('PN_FX_HD', 'FX simulation', 'Houdini', 'FX')
+        self.add_template('PN_MoP_MX', 'Props Modeling', 'Max', 'Modeling')
         self.add_template('PN_MoP_MA', 'Props Modeling', 'Maya', 'Modeling')
         self.add_template('PN_MoC_MA','Creature Modeling', 'Maya', 'Modeling')
         self.add_template('PN_MoC_MX','Creature Modeling', 'Max', 'Modeling')
