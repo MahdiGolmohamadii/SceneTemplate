@@ -128,6 +128,7 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
         for item in templates:
             bx = TemplateWidget(item, self.templates[item]['name'], self.templates[item]['software'], 
                                 self.templates[item]['category'])
+            bx.setProperty('code', item)
             self.boxes.append(bx)
         
         self.search_le = QtWidgets.QLineEdit()
@@ -162,10 +163,19 @@ class TemplateLibraryMainWindow(QtWidgets.QMainWindow):
 
     def search_le_changed(self):
         self.update_template_list(self.search_le.text())
+        
 
-    def update_template_list(self, str=''):
+    def update_template_list(self, str):
         templates = scene_setup.search_in_templates(str)
-        #print(templates)
+        print(templates)
+
+        for indx in range(self.templates_form_layout.rowCount()):
+            widget = self.templates_form_layout.itemAt(indx).widget()
+            if widget.property('code') in templates:
+                widget.show()
+                print(widget.property('code'))
+            else:
+                widget.hide()
 
     def on_add_new_pressed(self):
         new_window = CustomDialogs.AddNewTemplateWindow(self, scene_setup)

@@ -44,6 +44,7 @@ class SceneSetup(object):
         unsearchable=['Source_path']
         res = []
         str = '.*' + str + '.*'
+        print(str)
         for tmp in self.templates:
             for item in self.templates[tmp].keys():
                 if re.findall(str, self.templates[tmp][item]) and self.templates[tmp] not in unsearchable and tmp not in res:
@@ -51,7 +52,6 @@ class SceneSetup(object):
         return res
         
 if __name__ == '__main__':
-    print('hi')
     sc = SceneSetup()
-    print(sc.search_in_templates())
+    print(sc.search_in_templates('r'))
     
